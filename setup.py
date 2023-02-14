@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="UTF-8") as f:
     long_description = f.read()
 
-with open("requirements.txt", "r", encoding="UTF-8") as f:
-    install_requires = f.read().splitlines()
+with open("requirements/production.txt", "r", encoding="UTF-8") as f:
+    requirements_production = f.read().splitlines()
 
 metadata = {
     "name": "pygame-window",
@@ -42,7 +42,7 @@ metadata = {
     "license": "MIT",
     "packages": find_packages(where="src"),
     "package_dir": {"": "src"},
-    "install_requires": install_requires,
+    "install_requires": requirements_production,
     "python_requires": ">=3.7,<3.11",
     "keywords": [
         "python",
