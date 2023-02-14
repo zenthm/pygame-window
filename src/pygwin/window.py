@@ -7,6 +7,8 @@ variety of customizable features and convenient window management functions
 to make the development process smoother and more efficient.
 """
 
+from pygame._sdl2.video import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
+
 
 class Window:
     """A custom `Window` class for Pygame.
@@ -16,3 +18,15 @@ class Window:
     customizable features and convenient window management functions to make
     the development process smoother and more efficient.
     """
+
+    __dict__ = dict(
+        title="pygame",
+        size=(640, 480),
+        position=WINDOWPOS_CENTERED,
+        fullscreen=False,
+        visible=False,
+        borderless=False,
+        resizable=False,
+        minimized=False,
+        maximized=False,
+    )
