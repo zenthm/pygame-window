@@ -7,6 +7,8 @@ variety of customizable features and convenient window management functions
 to make the development process smoother and more efficient.
 """
 
+import pygame
+
 from pygame import _sdl2 as sdl
 from pygame._sdl2.video import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
 
@@ -39,6 +41,16 @@ class Window:
             representing the window.
         __renderer__ (sdl.video.Renderer): An instance of `sdl.video.Renderer`
             associated with the window.
+
+    Methods:
+        fill(color=(0, 0, 0)): Clears the window and fills it with the
+            specified color.
+        update(): Updates the window to display any changes made to it.
+        hide(): Hides the window.
+        show(): Shows the window.
+        minimize(): Minimizes the window.
+        maximize(): Maximizes the window.
+        destroy(): Destroys the window, freeing up system resources.
     """
 
     title = windes.TitleDescriptor()
@@ -124,3 +136,84 @@ class Window:
         self.resizable = resizable
         self.minimized = minimized
         self.maximized = maximized
+
+    def destroy(self):
+        """Close the window and release system resources.
+
+        This function closes the window and frees up any system resources
+        associated with it.
+
+        Returns:
+            None
+        """
+        self.__window__.destroy()
+
+    def fill(self, color=(0, 0, 0)):
+        """Fill the window with a specified color.
+
+        This function clears the current contents of the window and replaces it
+        with the specified color.
+
+        Args:
+            color (Union[Tuple[int, int, int], ColorValue]): The RGB values
+                (0-255) of the color to fill the window with, specified as a
+                tuple of integers, or a `ColorValue` object from `pygame`.
+                If not specified, the default color is (0, 0, 0).
+
+        Returns:
+            None
+        """
+        self.__renderer__.draw_color = pygame.Color(color)
+        self.__renderer__.clear()
+
+    def update(self):
+        """Refresh the window to display any changes made.
+
+        This function updates the window to reflect any changes made to its
+        contents, such as drawing new shapes or changing the color of existing
+        ones.
+
+        Returns:
+            None
+        """
+        self.__renderer__.present()
+
+    def hide(self):
+        """Hide the window.
+
+        This function makes the window invisible to the user.
+
+        Returns:
+            None
+        """
+        self.visible = False
+
+    def show(self):
+        """Make the window visible.
+
+        This function makes the window visible to the user.
+
+        Returns:
+            None
+        """
+        self.visible = True
+
+    def minimize(self):
+        """Minimize the window.
+
+        This function reduces the size of the window to its taskbar representation.
+
+        Returns:
+            None
+        """
+        self.minimized = not self.minimized
+
+    def maximize(self):
+        """Maximize the window.
+
+        This function expands the window to fill the entire screen.
+
+        Returns:
+            None
+        """
+        self.maximized = not self.maximized
