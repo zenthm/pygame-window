@@ -12,3 +12,5 @@ window creation and management.
 
 __author__ = "Zenthm"
 __version__ = "1.0.0.dev1"
+
+from pygwin.window import Window, WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
