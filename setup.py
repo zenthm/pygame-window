@@ -6,6 +6,14 @@ with open("README.md", "r", encoding="UTF-8") as f:
 with open("requirements/production.txt", "r", encoding="UTF-8") as f:
     requirements_production = f.read().splitlines()
 
+with open("requirements/development.txt", "r", encoding="UTF-8") as f:
+    requirements_development = f.read().splitlines()
+
+with open("requirements/documentation.txt", "r", encoding="UTF-8") as f:
+    requirements_documentation = f.read().splitlines()
+
+all_requirements = requirements_development + requirements_documentation
+
 metadata = {
     "name": "pygame-window",
     "version": "1.0.0.dev1",
@@ -43,6 +51,11 @@ metadata = {
     "packages": find_packages(where="src"),
     "package_dir": {"": "src"},
     "install_requires": requirements_production,
+    "extras_require": {
+        "all": all_requirements,
+        "development": requirements_development,
+        "documentation": requirements_documentation,
+    },
     "python_requires": ">=3.7,<3.11",
     "keywords": [
         "python",
