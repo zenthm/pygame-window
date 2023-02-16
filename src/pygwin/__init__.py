@@ -11,6 +11,8 @@ window creation and management.
 """
 
 __author__ = "Zenthm"
-__version__ = "1.0.0.dev1"
+
+with open("VERSION", "r", encoding="UTF-8") as f:
+    __version__ = f.read()
 
 from pygwin.window import Window, WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED

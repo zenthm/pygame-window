@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open("src/pygwin/VERSION", "r", encoding="UTF-8") as f:
+    version = f.read()
+
 with open("README.md", "r", encoding="UTF-8") as f:
     long_description = f.read()
 
@@ -16,7 +19,7 @@ reqs_all = reqs_devs + reqs_docs
 
 metadata = {
     "name": "pygame-window",
-    "version": "1.0.0.dev1",
+    "version": version,
     "author": "Zenthm",
     "author_email": "zenthm.dev@gmail.com",
     "description": "Enhanced window management and functionalities for Pygame",
