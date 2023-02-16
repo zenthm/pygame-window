@@ -50,6 +50,7 @@ metadata = {
     "license": "MIT",
     "packages": find_packages(where="src"),
     "package_dir": {"": "src"},
+    "include_package_data": True,
     "install_requires": requirements_production,
     "extras_require": {
         "all": all_requirements,
