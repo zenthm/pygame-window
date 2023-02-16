@@ -1,2 +1,2 @@
 include src/**/*.pyi
-recursive-include requirements *
+include requirements/**

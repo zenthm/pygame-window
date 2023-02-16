@@ -3,16 +3,16 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="UTF-8") as f:
     long_description = f.read()
 
-with open("requirements/production.txt", "r", encoding="UTF-8") as f:
-    requirements_production = f.read().splitlines()
+with open("requirements/prod.txt", "r", encoding="UTF-8") as f:
+    reqs_prod = f.read().splitlines()
 
-with open("requirements/development.txt", "r", encoding="UTF-8") as f:
-    requirements_development = f.read().splitlines()
+with open("requirements/devs.txt", "r", encoding="UTF-8") as f:
+    reqs_devs = f.read().splitlines()
 
-with open("requirements/documentation.txt", "r", encoding="UTF-8") as f:
-    requirements_documentation = f.read().splitlines()
+with open("requirements/docs.txt", "r", encoding="UTF-8") as f:
+    reqs_docs = f.read().splitlines()
 
-all_requirements = requirements_development + requirements_documentation
+reqs_all = reqs_devs + reqs_docs
 
 metadata = {
     "name": "pygame-window",
@@ -51,11 +51,11 @@ metadata = {
     "packages": find_packages(where="src"),
     "package_dir": {"": "src"},
     "include_package_data": True,
-    "install_requires": requirements_production,
+    "install_requires": reqs_prod,
     "extras_require": {
-        "all": all_requirements,
-        "development": requirements_development,
-        "documentation": requirements_documentation,
+        "all": reqs_all,
+        "devs": reqs_devs,
+        "docs": reqs_docs,
     },
     "python_requires": ">=3.7,<3.11",
     "keywords": [
