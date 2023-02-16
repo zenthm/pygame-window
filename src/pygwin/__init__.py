@@ -10,9 +10,15 @@ SDL2 library that Pygame is built upon, providing fine-grained control over
 window creation and management.
 """
 
+import pathlib
+
 __author__ = "Zenthm"
+__version__ = pathlib.Path(__file__).with_name("VERSION").read_text().strip()
 
-with open("VERSION", "r", encoding="UTF-8") as f:
-    __version__ = f.read()
+from pygwin.window import (
+    Window,
+    WINDOWPOS_CENTERED,
+    WINDOWPOS_UNDEFINED,
+)
 
-from pygwin.window import Window, WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
+del pathlib
