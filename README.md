@@ -12,3 +12,25 @@ their functionalities.
 The library uses Pygame's sub-module `pygame._sdl2` to access the low-level
 SDL2 library that Pygame is built upon, providing fine-grained control over
 window creation and management.
+
+## Installation
+
+Pygame-Window can be installed using pip with the following command:
+
+```bash
+python -m pip install pygame-window
+```
+
+If you want to install Pygame-Window from source, you can clone the repository
+from GitHub using the following command:
+
+```bash
+git clone https://github.com/zenthm/pygame-window.git
+```
+
+Once you have downloaded the source code, you can install Pygame-Window by
+running the following command from the root directory of the repository:
+
+```bash
+python -m pip install .
+```
