@@ -40,3 +40,13 @@ python -m pip install .
 Pygame-Window is distributed under the MIT License. See the
 [license](https://github.com/zenthm/pygame-window/blob/master/LICENSE) file for more
 information.
+
+## Acknowledgments
+
+I would like to thank the following for their contributions to Pygame-Window:
+
+- The Pygame team for creating and maintaining the Pygame library.
+- The SDL development team for creating and maintaining the SDL2 library.
+- The contributors to Pygame-Window.
+
+Thank you all for your valuable contributions!
