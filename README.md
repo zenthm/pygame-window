@@ -34,3 +34,9 @@ running the following command from the root directory of the repository:
 ```bash
 python -m pip install .
 ```
+
+## License
+
+Pygame-Window is distributed under the MIT License. See the
+[license](https://github.com/zenthm/pygame-window/blob/master/LICENSE) file for more
+information.
