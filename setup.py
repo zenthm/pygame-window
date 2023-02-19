@@ -1,22 +1,42 @@
+"""
+Setup file for the pygame-window package.
+
+This file defines the package metadata and options, including the package name,
+version, author information, description, long description, dependencies,
+Python version requirements, and other relevant information. It also reads the
+version number from a file, as well as the long description from a separate
+file, to ensure consistency across the package.
+
+The setup() function is called with the defined metadata options, which are
+used by pip to install the package from the PyPI repository.
+
+Author: Zenthm
+Email: zenthm.dev@gmail.com
+"""
+
 from setuptools import setup, find_packages
 
+# Read version number from file
 with open("src/pygwin/VERSION", "r", encoding="UTF-8") as f:
     version = f.read()
 
+# Read long description from file
 with open("README.md", "r", encoding="UTF-8") as f:
     long_description = f.read()
 
-with open("requirements/prod.txt", "r", encoding="UTF-8") as f:
-    reqs_prod = f.read().splitlines()
 
-with open("requirements/devs.txt", "r", encoding="UTF-8") as f:
-    reqs_devs = f.read().splitlines()
+# Read requirements from files
+def read_requirements(file_path):
+    with open(file_path, "r", encoding="UTF-8") as f:
+        return [line.strip() for line in f.readlines()]
 
-with open("requirements/docs.txt", "r", encoding="UTF-8") as f:
-    reqs_docs = f.read().splitlines()
 
+reqs_prod = read_requirements("requirements/prod.txt")
+reqs_devs = read_requirements("requirements/devs.txt")
+reqs_docs = read_requirements("requirements/docs.txt")
 reqs_all = reqs_devs + reqs_docs
 
+# Define package metadata and options
 metadata = {
     "name": "pygame-window",
     "version": version,
@@ -74,4 +94,5 @@ metadata = {
     "zip_safe": False,
 }
 
+# Call setup with metadata options
 setup(**metadata)
