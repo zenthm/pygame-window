@@ -25,7 +25,7 @@ import shutil
 import invoke
 
 CLEAN_DIRS = [
-    "*.egg-info",
+    "**/*.egg-info",
     ".mypy_cache",
     ".pytest_cache",
     "build",
