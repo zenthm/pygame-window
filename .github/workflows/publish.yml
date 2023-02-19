@@ -32,12 +32,12 @@ jobs:
       # Build the package
       - name: Build package
         run: |
-          python -m build
+          inv build
 
       # Publish the package to PyPI using the twine
       - name: Publish package
         run: |
-          python -m twine upload dist/*
+          inv release
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
