@@ -10,9 +10,10 @@ to make the development process smoother and more efficient.
 import pygame
 
 from pygame import _sdl2 as sdl
-from pygame._sdl2.video import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED  # noqa
-
 from pygwin import _window_descriptors as windes
+
+WINDOWPOS_CENTERED = 805240832
+WINDOWPOS_UNDEFINED = 536805376
 
 
 class Window:

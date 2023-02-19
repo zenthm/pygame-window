@@ -1,6 +1,8 @@
 from typing import Tuple, Union
 from pygame import Color
-from pygwin import WINDOWPOS_CENTERED
+
+WINDOWPOS_CENTERED: int
+WINDOWPOS_UNDEFINED: int
 
 class Window:
     title: str
