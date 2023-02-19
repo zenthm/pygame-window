@@ -60,8 +60,8 @@ class Window:
     visible = windes.VisibleDescriptor()
     borderless = windes.BorderlessDescriptor()
     resizable = windes.ResizableDescriptor()
-    minimize = windes.MinimizeDescriptor()
-    maximize = windes.MaximizeDescriptor()
+    minimized = windes.MinimizedDescriptor()
+    maximized = windes.MaximizedDescriptor()
 
     __dict__ = dict(
         title="pygame",

@@ -44,7 +44,7 @@ class FullscreenDescriptor:
     """Descriptor for the fullscreen state of the window."""
 
     def __get__(self, instance, owner):
-        return instance.__window__.fullscreen
+        return instance.__dict__["fullscreen"]
 
     def __set__(self, instance, value):
         if value:
@@ -57,7 +57,7 @@ class VisibleDescriptor:
     """Descriptor for the visibility of the window."""
 
     def __get__(self, instance, owner):
-        return instance.__window__.visible
+        return instance.__dict__["visible"]
 
     def __set__(self, instance, value):
         if value:
@@ -86,22 +86,22 @@ class ResizableDescriptor:
         instance.__window__.resizable = value
 
 
-class MinimizeDescriptor:
+class MinimizedDescriptor:
     """Descriptor for the minimized state of the window."""
 
     def __get__(self, instance, owner):
-        return instance.__window__.minimize
+        return instance.__dict__["minimized"]
 
     def __set__(self, instance, value):
         if instance.__dict__["minimized"] != value:
             instance.__window__.minimize()
 
 
-class MaximizeDescriptor:
+class MaximizedDescriptor:
     """Descriptor for the maximized state of the window."""
 
     def __get__(self, instance, owner):
-        return instance.__window__.maximize
+        return instance.__dict__["maximized"]
 
     def __set__(self, instance, value):
         if instance.__dict__["maximized"] != value:
