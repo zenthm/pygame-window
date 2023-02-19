@@ -144,6 +144,9 @@ class Window:
     def __ne__(self, o):
         return self.__window__ != o
 
+    def __repr__(self):
+        return f"<Window({self.title} {self.size})>"
+
     def destroy(self):
         """Close the window and release system resources.
 
