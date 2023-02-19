@@ -10,7 +10,7 @@ to make the development process smoother and more efficient.
 import pygame
 
 from pygame import _sdl2 as sdl
-from pygame._sdl2.video import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
+from pygame._sdl2.video import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED  # noqa
 
 from pygwin import _window_descriptors as windes
 
@@ -201,7 +201,8 @@ class Window:
     def minimize(self):
         """Minimize the window.
 
-        This function reduces the size of the window to its taskbar representation.
+        This function reduces the size of the window to its taskbar
+        representation.
 
         Returns:
             None

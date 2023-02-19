@@ -15,7 +15,7 @@ import pathlib
 __author__ = "Zenthm"
 __version__ = pathlib.Path(__file__).with_name("VERSION").read_text().strip()
 
-from pygwin.window import (
+from pygwin.window import (  # noqa
     Window,
     WINDOWPOS_CENTERED,
     WINDOWPOS_UNDEFINED,
