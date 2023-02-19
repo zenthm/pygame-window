@@ -146,7 +146,7 @@ def build(ctx):
     ctx.run(cmd)
 
 
-@invoke.task(pre=[clean, build])
+@invoke.task
 def release(ctx):
     """
     Create a new release on PyPI.
