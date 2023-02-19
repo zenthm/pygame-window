@@ -89,7 +89,8 @@ def test(ctx):
     Returns:
         None.
     """
-    ctx.run("pytest")
+    cmd = "pytest --cov-report term-missing"
+    ctx.run(cmd)
 
 
 @invoke.task
