@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/pypi/l/pygame-window)](https://github.com/zenthm/pygame-window/blob/master/LICENSE.md)
 [![Python Version](https://img.shields.io/pypi/pyversions/pygame-window)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Test](https://github.com/zenthm/pygame-window/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/zenthm/pygame-window/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/zenthm/pygame-window/badge.svg?branch=master)](https://coveralls.io/github/zenthm/pygame-window?branch=master)
 
 Pygame-Window is a Python library that provides an API for managing and
