@@ -2,6 +2,7 @@ black
 build
 coveralls
 flake8
+mypy
 pytest
 pytest-cov
 twine
