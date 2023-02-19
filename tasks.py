@@ -20,6 +20,8 @@ For more information on each task, run 'invoke --help <task>'.
 
 import os
 import pathlib
+import shutil
+
 import invoke
 
 CLEAN_DIRS = [
