@@ -138,6 +138,12 @@ class Window:
         self.minimized = minimized
         self.maximized = maximized
 
+    def __eq__(self, o):
+        return self.__window__ == o
+
+    def __ne__(self, o):
+        return self.__window__ != o
+
     def destroy(self):
         """Close the window and release system resources.
 
