@@ -42,3 +42,15 @@ def test_methods():
     window.minimize()
     window.maximize()
     pygame.quit()
+
+
+def test_magic_methods():
+    pygame.init()
+    window = pygwin.Window()
+    window == window
+    window == "window"
+    window != window
+    window != "window"
+
+    print(window)
+    pygame.quit()
