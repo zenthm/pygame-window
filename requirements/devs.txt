@@ -3,6 +3,7 @@ build
 coveralls
 flake8
 invoke
+isort
 mypy
 pytest
 pytest-cov
