@@ -14,7 +14,7 @@ Author: Zenthm
 Email: zenthm.dev@gmail.com
 """
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Read version number from file
 with open("src/pygwin/VERSION", "r", encoding="UTF-8") as f:
