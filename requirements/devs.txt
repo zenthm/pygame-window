@@ -5,6 +5,7 @@ flake8
 invoke
 isort
 mypy
+pre-commit
 pytest
 pytest-cov
 twine
