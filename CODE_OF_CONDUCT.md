@@ -4,7 +4,7 @@
 
 The purpose of this Code of Conduct is to establish and maintain a positive and
 inclusive community for users and contributors of the Pygame-Window project.
-We believe that a welcoming and respectful community makes for a better
+I believe that a welcoming and respectful community makes for a better
 experience for everyone.
 
 ## Scope
