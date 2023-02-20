@@ -1,4 +1,5 @@
 from typing import Tuple, Union
+
 from pygame import Color
 
 WINDOWPOS_CENTERED: int

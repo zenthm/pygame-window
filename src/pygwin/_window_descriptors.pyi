@@ -1,4 +1,5 @@
 from typing import Tuple, Type
+
 from pygwin.window import Window
 
 class TitleDescriptor:

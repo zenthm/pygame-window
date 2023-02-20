@@ -10,15 +10,13 @@ SDL2 library that Pygame is built upon, providing fine-grained control over
 window creation and management.
 """
 
+# flake8: noqa F401
+
 import pathlib
 
 __author__ = "Zenthm"
 __version__ = pathlib.Path(__file__).with_name("VERSION").read_text().strip()
 
-from pygwin.window import (  # noqa
-    Window,
-    WINDOWPOS_CENTERED,
-    WINDOWPOS_UNDEFINED,
-)
+from pygwin.window import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED, Window
 
 del pathlib

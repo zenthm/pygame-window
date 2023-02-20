@@ -8,8 +8,8 @@ to make the development process smoother and more efficient.
 """
 
 import pygame
-
 from pygame import _sdl2 as sdl
+
 from pygwin import _window_descriptors as windes
 
 WINDOWPOS_CENTERED = 805240832
