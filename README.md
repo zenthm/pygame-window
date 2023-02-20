@@ -6,6 +6,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Test](https://github.com/zenthm/pygame-window/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/zenthm/pygame-window/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/zenthm/pygame-window/badge.svg?branch=master)](https://coveralls.io/github/zenthm/pygame-window?branch=master)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
 Pygame-Window is a Python library that provides an API for managing and
 manipulating multiple windows within the Pygame framework, as well as enhancing
