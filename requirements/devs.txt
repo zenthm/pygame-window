@@ -1,11 +1,11 @@
 black
 build
 coveralls
-flake8
 invoke
 isort
 mypy
 pre-commit
+pylint
 pytest
 pytest-cov
 twine
