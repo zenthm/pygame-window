@@ -1,3 +1,4 @@
+include src/**/py.typed
 include src/**/*.pyi
 include src/**/VERSION
 include requirements/**
