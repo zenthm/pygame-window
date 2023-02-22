@@ -1,0 +1,2 @@
+[MASTER]
+extension-pkg-allow-list=pygame._sdl2.video
