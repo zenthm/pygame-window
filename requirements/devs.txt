@@ -1,12 +1,12 @@
 black
 build
 coveralls
-invoke
 isort
 mypy
 pre-commit
 pylint
 pytest
 pytest-cov
+tox
 twine
 wheel
