@@ -65,17 +65,17 @@ class Window:
     minimized = windes.MinimizedDescriptor()
     maximized = windes.MaximizedDescriptor()
 
-    __dict__ = dict(
-        title="pygame",
-        size=(640, 480),
-        position=WINDOWPOS_CENTERED,
-        fullscreen=False,
-        visible=False,
-        borderless=False,
-        resizable=False,
-        minimized=False,
-        maximized=False,
-    )
+    __dict__ = {
+        "title": "pygame",
+        "size": (640, 480),
+        "position": WINDOWPOS_CENTERED,
+        "fullscreen": False,
+        "visible": False,
+        "borderless": False,
+        "resizable": False,
+        "minimized": False,
+        "maximized": False,
+    }
 
     def __init__(
         self,
