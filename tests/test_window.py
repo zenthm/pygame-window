@@ -1,6 +1,29 @@
 import pygame
+import pytest
 
 import pygwin
+
+
+def test_arguments():
+    pygame.init()
+    window = pygwin.Window(
+        title="test",
+        size=(800, 600),
+        position=(0, 0),
+        fullscreen=True,
+        visible=True,
+        borderless=True,
+        resizable=True,
+        minimized=True,
+        maximized=True,
+    )
+    window.destroy()
+
+    with pytest.raises(AttributeError):
+        window = pygwin.Window(test=None)
+        window.destroy()
+
+    pygame.quit()
 
 
 def test_attributes():
