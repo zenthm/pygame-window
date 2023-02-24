@@ -1,0 +1,2 @@
+VERSION: str
+VERSION_FILE: str
