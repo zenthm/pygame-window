@@ -77,18 +77,7 @@ class Window:
         "maximized": False,
     }
 
-    def __init__(
-        self,
-        title="pygame",
-        size=(640, 480),
-        position=WINDOWPOS_CENTERED,
-        fullscreen=False,
-        visible=False,
-        borderless=False,
-        resizable=False,
-        minimized=False,
-        maximized=False,
-    ):
+    def __init__(self, **args):
         """Initializes a window.
 
         Args:
@@ -129,15 +118,14 @@ class Window:
         self.__window__ = sdl.video.Window(hidden=True)
         self.__renderer__ = sdl.video.Renderer(self.__window__)
 
-        self.title = title
-        self.size = size
-        self.position = position
-        self.fullscreen = fullscreen
-        self.visible = visible
-        self.borderless = borderless
-        self.resizable = resizable
-        self.minimized = minimized
-        self.maximized = maximized
+        for key, value in self.__dict__.items():
+            setattr(self, key, value)
+
+        for key, value in args.items():
+            if key in self.__dict__:
+                setattr(self, key, value)
+            else:
+                raise AttributeError(f"'Window' type has no attribute '{key}'")
 
     def __eq__(self, other):
         return self.__window__ == other
