@@ -17,7 +17,7 @@ import os
 VERSION_FILE = os.path.join(os.path.dirname(__file__), "VERSION")
 
 # Read the version number from the VERSION file
-with open(VERSION_FILE) as f:
+with open(VERSION_FILE, encoding="UTF-8") as f:
     VERSION = f.read().strip()
 
 # Clean up by removing the reference to the os module
