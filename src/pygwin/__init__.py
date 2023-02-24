@@ -9,7 +9,7 @@ window creation and management.
 """
 
 from pygwin import version, windes, window
-from pygwin.window import Window, WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
+from pygwin.window import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED, Window
 
 __author__ = "Zenthm"
 __version__ = version.VERSION
