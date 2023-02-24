@@ -139,11 +139,11 @@ class Window:
         self.minimized = minimized
         self.maximized = maximized
 
-    def __eq__(self, o):
-        return self.__window__ == o
+    def __eq__(self, other):
+        return self.__window__ == other
 
-    def __ne__(self, o):
-        return self.__window__ != o
+    def __ne__(self, other):
+        return self.__window__ != other
 
     def __repr__(self):
         return f"<Window({self.title} {self.size})>"
