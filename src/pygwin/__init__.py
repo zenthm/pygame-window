@@ -1,6 +1,4 @@
 """
-Pygame-Window: Enhanced window management and functionalities for Pygame
-
 Pygame-Window is a Python library that provides an API for managing and
 manipulating multiple windows within the Pygame framework, as well as enhancing
 their functionalities.
@@ -10,13 +8,8 @@ SDL2 library that Pygame is built upon, providing fine-grained control over
 window creation and management.
 """
 
-# flake8: noqa F401
-
-import pathlib
+from pygwin import version, windes, window
+from pygwin.window import Window, WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED
 
 __author__ = "Zenthm"
-__version__ = pathlib.Path(__file__).with_name("VERSION").read_text().strip()
-
-from pygwin.window import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED, Window
-
-del pathlib
+__version__ = version.VERSION
