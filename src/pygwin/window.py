@@ -10,8 +10,9 @@ to make the development process smoother and more efficient.
 import pygame
 from pygame import _sdl2 as sdl
 
-from pygwin import _window_descriptors as windes
+from pygwin import windes
 
+# Define window constants
 WINDOWPOS_CENTERED = 805240832
 WINDOWPOS_UNDEFINED = 536805376
 
