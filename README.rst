@@ -39,7 +39,7 @@ License
 -------
 
 Pygame-Window is distributed under the MIT License. See the
-`license <https://github.com/zenthm/pygame-window/blob/master/LICENSE>`__
+`license <https://github.com/zenthm/pygame-window/blob/master/LICENSE.rst>`__
 file for more information.
 
 Acknowledgments
@@ -65,7 +65,7 @@ and inclusive environment for all.
 
 To that end, I ask that anyone who interacts with this project or
 contributes to it follow this `Code of
-Conduct <https://github.com/zenthm/pygame-window/blob/master/CODE_OF_CONDUCT.md>`__.
+Conduct <https://github.com/zenthm/pygame-window/blob/master/CODE_OF_CONDUCT.rst>`__.
 The Code of Conduct outlines specific behaviors that are expected of
 contributors and community members, as well as the consequences for
 violating the Code of Conduct.
@@ -85,7 +85,7 @@ project.
 .. |Coverage Status| image:: https://coveralls.io/repos/github/zenthm/pygame-window/badge.svg?branch=master
    :target: https://coveralls.io/github/zenthm/pygame-window?branch=master
 .. |License| image:: https://img.shields.io/pypi/l/pygame-window
-   :target: https://github.com/zenthm/pygame-window/blob/master/LICENSE.md
+   :target: https://github.com/zenthm/pygame-window/blob/master/LICENSE.rst
 .. |Python Version| image:: https://img.shields.io/pypi/pyversions/pygame-window
    :target: https://www.python.org/downloads/
 .. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
