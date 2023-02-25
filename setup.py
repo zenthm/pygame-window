@@ -21,7 +21,7 @@ with open("src/pygwin/VERSION", "r", encoding="UTF-8") as f:
     version = f.read()
 
 # Read long description from file
-with open("README.md", "r", encoding="UTF-8") as f:
+with open("README.rst", "r", encoding="UTF-8") as f:
     long_description = f.read()
 
 
