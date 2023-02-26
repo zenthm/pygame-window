@@ -1,11 +1,14 @@
 from typing import Tuple, Union
 
-from pygame import Color
+from pygame import _sdl2 as sdl, Color
 
 WINDOWPOS_CENTERED: int
 WINDOWPOS_UNDEFINED: int
 
 class Window:
+    __window__: sdl.Window
+    __renderer__: sdl.Renderer
+
     title: str
     size: Tuple[int, int]
     position: Union[int, Tuple[int, int]]
@@ -34,4 +37,5 @@ class Window:
     def show(self) -> None: ...
     def minimize(self) -> None: ...
     def maximize(self) -> None: ...
+    def restore(self) -> None: ...
     def destroy(self) -> None: ...
