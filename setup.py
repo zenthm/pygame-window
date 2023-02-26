@@ -69,6 +69,7 @@ metadata = {
         "Programming Language :: Python :: 3.10",
         "Topic :: Games/Entertainment",
         "Topic :: Software Development :: Libraries :: pygame",
+        "Typing :: Typed",
     ],
     "license": "MIT",
     "packages": find_packages(where="src"),
