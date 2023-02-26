@@ -51,13 +51,16 @@ def test_attributes():
     window.resizable
     window.minimized
     window.maximized
+
+    with pytest.raises(AttributeError):
+        window.test
+
+    window.destroy()
     pygame.quit()
 
 
 def test_methods():
     pygame.init()
-    window = pygwin.Window()
-    window.destroy()
     window = pygwin.Window()
     window.fill()
     window.update()
@@ -65,6 +68,8 @@ def test_methods():
     window.show()
     window.minimize()
     window.maximize()
+    window.restore()
+    window.destroy()
     pygame.quit()
 
 
