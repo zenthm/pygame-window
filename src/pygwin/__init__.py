@@ -8,8 +8,9 @@ SDL2 library that Pygame is built upon, providing fine-grained control over
 window creation and management.
 """
 
-from pygwin import version, windes, window
-from pygwin.window import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED, Window
+# Import attributes
+from pygwin.__attr__ import *  # isort: skip
 
-__author__ = "Zenthm"
-__version__ = version.VERSION
+# Import window tools
+from pygwin import window
+from pygwin.window import WINDOWPOS_CENTERED, WINDOWPOS_UNDEFINED, Window
