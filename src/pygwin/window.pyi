@@ -1,6 +1,7 @@
 from typing import Tuple, Union
 
-from pygame import _sdl2 as sdl, Color
+from pygame import Color
+from pygame import _sdl2 as sdl
 
 WINDOWPOS_CENTERED: int
 WINDOWPOS_UNDEFINED: int
