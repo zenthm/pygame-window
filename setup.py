@@ -1,24 +1,27 @@
 """
-Setup file for the pygame-window package.
+Setup file for the Pygame-Window package.
 
 This file defines the package metadata and options, including the package name,
 version, author information, description, long description, dependencies,
 Python version requirements, and other relevant information. It also reads the
-version number from a file, as well as the long description from a separate
-file, to ensure consistency across the package.
+`__attr__.py` file for setting up package attributes.
 
 The setup() function is called with the defined metadata options, which are
 used by pip to install the package from the PyPI repository.
-
-Author: Zenthm
-Email: zenthm.dev@gmail.com
 """
+
+from pathlib import Path
 
 from setuptools import find_packages, setup
 
-# Read version number from file
-with open("src/pygwin/VERSION", "r", encoding="UTF-8") as f:
-    version = f.read()
+# Setup package attributes
+attr_file = Path("src/pygwin/__attr__.py")
+attr_info = {"__file__": attr_file}
+
+# Read package attributes
+with open(attr_file, "r", encoding="UTF-8") as f:
+    content = f.read()
+    exec(content, attr_info)
 
 # Read long description from file
 with open("README.rst", "r", encoding="UTF-8") as f:
@@ -38,9 +41,9 @@ reqs_all = reqs_devs + reqs_docs
 
 # Define package metadata and options
 metadata = {
-    "name": "pygame-window",
-    "version": version,
-    "author": "Zenthm",
+    "name": attr_info["__package__"],
+    "version": attr_info["__version__"],
+    "author": attr_info["__author__"],
     "author_email": "zenthm.dev@gmail.com",
     "description": "Enhanced window management and functionalities for Pygame",
     "long_description": long_description,
