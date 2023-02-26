@@ -1,6 +1,11 @@
 repos:
   - repo: local
     hooks:
+      - id: build
+        name: Build code
+        entry: python -m tox -e build
+        language: system
+        pass_filenames: false
       - id: format
         name: Format code
         entry: python -m tox -e format
